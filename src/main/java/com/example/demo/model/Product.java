@@ -10,6 +10,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "products")
 public class Product {
+    public static final Product EMPTY =new Product() ;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
