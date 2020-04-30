@@ -26,8 +26,8 @@ public class Product {
     @Column
     private float price;
 
-   /* @ManyToOne
+    @ManyToOne
     @JoinColumn(name = "category_id")
-    private Category category;*/
+    private Category category;
 
 }

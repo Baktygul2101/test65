@@ -10,4 +10,6 @@ public interface CategoryRepo extends JpaRepository<Category, Integer> {
 
     @Query("select p from Category as p where p.name like CONCAT(:name, '%')")
     public List<Category> getByName(String name);
+
+
 }
