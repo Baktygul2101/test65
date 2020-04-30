@@ -16,5 +16,5 @@
         </ul>
 
     </body>
-    <script src="/static/js/script.js"></script>
+
 </html>
