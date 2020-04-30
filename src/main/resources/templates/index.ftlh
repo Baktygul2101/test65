@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Lesson 65. JPA & ORM</title>
+        <title>onlineshop</title>
     </head>
     <body>
         <h1>Содержимое страницы</h1>
@@ -14,6 +14,7 @@
             </li>
         </#list>
         </ul>
-        <script src="/js/script.js"></script>
+
     </body>
+    <script src="/static/js/script.js"></script>
 </html>

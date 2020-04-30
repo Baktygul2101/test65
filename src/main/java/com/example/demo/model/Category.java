@@ -17,7 +17,7 @@ public class Category {
     @Column(length = 128)
     private String icon;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
+   /* @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
     @OrderBy("name ASC")
-    List<Product> products;
+    List<Product> products;*/
 }
