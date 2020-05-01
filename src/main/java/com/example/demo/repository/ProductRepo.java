@@ -9,10 +9,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ProductRepo extends JpaRepository<Product, Integer> {
-    public Optional<Product> findByName(String s);
-
-
-    @Query(value = "SELECT * FROM products WHERE name = :name", nativeQuery = true)
-    List<Product> findAllByName(@Param("name") String name);
-
+    Optional<Product> findAllById(int id);
+    Product findByName(String name);
+    @Query("select p from Product as p where p.name like CONCAT(:name, '%')")
+    public List<Product> getByName(String name);
 }

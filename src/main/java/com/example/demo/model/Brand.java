@@ -1,6 +1,5 @@
 package com.example.demo.model;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,15 +11,14 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table (name = "categories")
-public class Category{
+@Table (name = "brands")
+public class Brand {
     @Id
     @GeneratedValue
     private int id;
-    private String categoryName;
-    private String description;
+    private String brandName;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "brand")
     @OrderBy("name ASC")
     List<Product> products;
 }

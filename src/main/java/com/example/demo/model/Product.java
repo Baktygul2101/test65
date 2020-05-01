@@ -4,32 +4,26 @@ import lombok.*;
 import javax.persistence.*;
 
 @Data
-@Builder
-@AllArgsConstructor(access = AccessLevel.PACKAGE)
+@AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "products")
-public class Product {
-    public static final Product EMPTY =new Product() ;
-
+@Table (name = "products")
+public class Product{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    @Column(length = 128)
+    @GeneratedValue
+    private int id;
     private String name;
-    @Column(length = 128)
     private String image;
-    @Column
-    private Integer count;
-    @Column(length = 128)
+    private int quantity;
     private String description;
-    @Column
-    private float price;
+    private double price;
 
-   /* @ManyToOne
+    @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
 
-    public Product(String p, String s) {
-    }*/
+    @ManyToOne
+    @JoinColumn(name = "brand_id")
+    private Brand brand;
+
 }
